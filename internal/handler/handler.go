@@ -10,7 +10,8 @@ func InitRoutes() *fiber.App {
 	})
 
 	library := router.Group("/library")
-	library.Get("/", GetLibrary)
+	library.Get("/", GetLibraries)
+	library.Post("/", CreateLibrary)
 
 	return router
 }
